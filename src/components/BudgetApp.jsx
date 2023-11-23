@@ -6,6 +6,7 @@ import { fetchData } from '../api/api';
 import ExpenseForm from "./ExpenseForm";
 
 
+
 function BudgetApp() {
 
     const [expenses, setExpenses] = useState([]);
@@ -33,7 +34,7 @@ function BudgetApp() {
 
 
     return (
-        <div>
+        <div className ="card">
             <Expenses expenses={expenses} totalPrice={totalExpenses}/>
             <Income totalExpenses={totalExpenses} />
             <ExpenseForm />

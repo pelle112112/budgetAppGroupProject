@@ -1,13 +1,29 @@
+import { useState } from 'react';
+import PostData from "../api/PostData";
+
 function ExpenseForm(){
+
+    const[name, setName] = useState('');
+    const[price, setPrice] = useState('');
+
+    const handleFormSubmmit = (e) => {
+        e.preventDefault();
+        const newExpense = {
+            name: name,
+            price: price,
+        };
+        console.log(newExpense);
+        PostData(newExpense);
+    };
+
+
     return (<div>
         <h2>Add Expense</h2>
-        <form>
-    <label htmlFor="id">Id</label>
-    <input id="id" type="number" readOnly placeholder="id" />
+        <form onSubmit={handleFormSubmmit}>
     <label htmlFor="name">Name</label>
-    <input id="name" type="text" placeholder="name" />
+    <input id="name" type="text" placeholder="name" value={name} onChange={(expense)=> setName(expense.target.value)}/>
     <label htmlFor="price">Cost</label>
-    <input id="price" type="number" placeholder="price" />
+    <input id="price" type="number" placeholder="price" min={0} onChange={(expense) => setPrice(expense.target.value)}/>
     <button type="submit" >Add Expense</button>
 </form>
     </div>);

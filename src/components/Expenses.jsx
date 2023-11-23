@@ -17,9 +17,11 @@ function Expenses({expenses, totalPrice}) {
         <td>{expense.id}</td>
         <td>{expense.name}</td>
         <td>{expense.price}</td>
-        <td>
+        <td className= "action-cell">
+            <div className="button-container">
             <button>Edit</button>
             <button>Delete</button>
+            </div>
         </td>
         </tr>
         ))}
