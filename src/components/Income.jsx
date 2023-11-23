@@ -19,7 +19,8 @@ function Income({ totalExpenses }) {
                 <button onClick={() => handleSetIncome()}>Calculate</button>
             </div>
             <div>
-                <h2>This is your available amount after your bills have been paid: {income - totalExpenses} </h2>
+                <h2>If your income is: {income}</h2>
+                <h2>This is your available amount after your bills have been paid: {parseInt(income) - parseInt(totalExpenses)} </h2>
             </div>
         </div>
     );

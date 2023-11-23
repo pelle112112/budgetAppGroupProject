@@ -8,28 +8,36 @@ import ExpenseForm from "./ExpenseForm";
 
 function BudgetApp() {
 
-    const[expenses, setExpenses] = useState([]);
-  const APIURL = 'http://localhost:3000/api';
-  
-  function getExpenses(callback){
-    fetchData(APIURL, callback);
-  }
-  useEffect(() => {
-    getExpenses((data) => setExpenses(data));
-  }, []);
+    const [expenses, setExpenses] = useState([]);
+    const [totalExpenses, setTotalExpenses] = useState(0);
+    const APIURL = 'http://localhost:3000/api';
+
+    function getExpenses(callback) {
+        fetchData(APIURL, callback);
+    }
+
+    function calculateExpenses() {
+        const totalPrice = expenses.reduce((totalAmount, expense) => {
+            return totalAmount + parseInt(expense.price);
+        }, 0);
+        return totalPrice;
+    }
+
+    useEffect(() => {
+        getExpenses((data) => {
+            setExpenses(data)
+            const calculatedExpenses = calculateExpenses();
+            setTotalExpenses(calculatedExpenses);
+        });
+    }, []);
 
 
-
-    //const[totalExpenses, setTotalExpenses] = useState[0];
-    const totalExpenses = 12000;
-
-    return ( 
-    <div>
-        
-        <Expenses expenses={expenses}/>
-        <Income totalExpenses={totalExpenses} />
-        <ExpenseForm/>
-    </div>
+    return (
+        <div>
+            <Expenses expenses={expenses} totalPrice={totalExpenses}/>
+            <Income totalExpenses={totalExpenses} />
+            <ExpenseForm />
+        </div>
     );
 }
 

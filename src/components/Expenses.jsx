@@ -1,4 +1,4 @@
-function Expenses({expenses}) {
+function Expenses({expenses, totalPrice}) {
 
     return ( 
     <>
@@ -23,6 +23,12 @@ function Expenses({expenses}) {
         </td>
         </tr>
         ))}
+        <tr>
+            <td>Total expenses:</td>
+            <td/>
+            <td>{parseInt(totalPrice)}</td>
+            <td/>
+        </tr>
     </tbody>
     </table>
 
