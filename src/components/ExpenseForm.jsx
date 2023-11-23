@@ -1,11 +1,8 @@
-import { fetchData } from "../api/api";
 import { useState } from 'react';
-import { useEffect } from 'react';
 import PostData from "../api/PostData";
 
 function ExpenseForm(){
 
-    const APIURL = 'http://localhost:3000/api';
     const[name, setName] = useState('');
     const[price, setPrice] = useState('');
 
