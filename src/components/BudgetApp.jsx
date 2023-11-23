@@ -1,6 +1,7 @@
 import Expenses from "./Expenses";
 import Income from "./Income";
 
+
 function BudgetApp() {
     return ( 
     <div>
