@@ -1,8 +1,16 @@
-function Expenses() {
+function Expenses({expenses}) {
+
     return ( 
-    <div>
-        This is Expenses
-    </div>
+    <>
+        {expenses?.map((expense => (
+                <div key={crypto.randomUUID()}>
+                <div>ID: {expense.id}</div>
+                <div>Name: {expense.name}</div>
+                <div>Price: {expense.price}</div>
+              </div>
+           
+        )))}
+    </>
     );
 }
 
