@@ -3,32 +3,32 @@
     [
       {
         "id": 1,
-        "category": "Power",
+        "name": "Power",
         "price": "1000"
 
     
       },
       {
         "id": 2,
-        "category": "Gas",
+        "name": "Gas",
         "price": "2000"
     
       },
       {
         "id": 3,
-        "category": "Water",
+        "name": "Water",
         "price": "3000"
     
       },
       {
         "id": 4,
-        "category": "Internet",
+        "name": "Internet",
         "price": "250"
      
       },
       {
         "id": 5,
-        "category": "Phone",
+        "name": "Phone",
         "price": "500"
    
       }

@@ -1,10 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
+import { useEffect } from 'react';
 import './App.css'
+import { fetchData } from './api/api'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const[expenses, setExpenses] = useState([]);
+  const APIURL = 'http://localhost:3004/api';
+  
+  function getExpenses(callback){
+    fetchData(APIURL, callback);
+  }
+  useEffect(() => {
+    getExpenses((data) => setExpenses(data));
+  }, []);
 
   return (
     <>
