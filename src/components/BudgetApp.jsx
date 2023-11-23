@@ -25,7 +25,7 @@ function BudgetApp() {
     const totalExpenses = 12000;
 
     return ( 
-    <div>
+    <div className ="card">
         
         <Expenses expenses={expenses}/>
         <Income totalExpenses={totalExpenses} />
