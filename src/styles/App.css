@@ -42,3 +42,18 @@
 .read-the-docs {
   color: #888;
 }
+
+.action-cell {
+  text-align: right;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.button-container button {
+  border: 1px solid black;
+  margin-left: 5px;
+}

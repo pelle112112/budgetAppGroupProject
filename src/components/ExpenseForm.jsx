@@ -7,7 +7,7 @@ function ExpenseForm(){
     <label htmlFor="name">Name</label>
     <input id="name" type="text" placeholder="name" />
     <label htmlFor="price">Cost</label>
-    <input id="price" type="number" placeholder="price" />
+    <input id="price" type="number" placeholder="price" min={0} />
     <button type="submit" >Add Expense</button>
 </form>
     </div>);
