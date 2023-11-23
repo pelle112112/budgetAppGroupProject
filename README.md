@@ -13,3 +13,7 @@ We will have full CRUD operations to manage our expenses,
 a http file to test the response we get from our requests, 
 be using react Hooks, 
 use the Fetch API to communicate with the json-server. 
+
+This is our initial thoughts on how the components should be linked together:
+
+![Alt text](/Documentation/componentStructure.png)
