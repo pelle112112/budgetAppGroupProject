@@ -1,0 +1,36 @@
+{
+    "api":
+    [
+      {
+        "id": 1,
+        "category": "Power",
+        "price": "1000"
+
+    
+      },
+      {
+        "id": 2,
+        "category": "Gas",
+        "price": "2000"
+    
+      },
+      {
+        "id": 3,
+        "category": "Water",
+        "price": "3000"
+    
+      },
+      {
+        "id": 4,
+        "category": "Internet",
+        "price": "250"
+     
+      },
+      {
+        "id": 5,
+        "category": "Phone",
+        "price": "500"
+   
+      }
+    ]
+  }
