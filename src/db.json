@@ -1,0 +1,33 @@
+
+[
+
+{
+    "id":1,
+    "name": "Power",
+    "cost": 100
+
+},
+{
+    "id":2,
+    "name": "Water",
+    "cost": 200
+
+},
+{
+    "id":3,
+    "name": "Gas",
+    "cost": 300
+
+},
+{
+    "id":4,
+    "name": "Internet",
+    "cost": 400
+
+},
+{
+    "id":5,
+    "name": "Phone",
+    "cost": 500
+}
+]
