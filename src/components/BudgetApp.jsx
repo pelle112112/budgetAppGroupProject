@@ -25,12 +25,13 @@ function BudgetApp() {
     }
 
     useEffect(() => {
-        getExpenses((data) => {
-            setExpenses(data)
-            const calculatedExpenses = calculateExpenses();
-            setTotalExpenses(calculatedExpenses);
-        });
+        getExpenses((data) => setExpenses(data));
     }, []);
+
+    useEffect(() => {
+        const calculatedExpenses = calculateExpenses();
+        setTotalExpenses(calculatedExpenses);
+    }, [expenses]);
 
 
     return (
