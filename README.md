@@ -1,8 +1,15 @@
-# React + Vite
+The project is being developed by group 5 team B. 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Budget App
 
-Currently, two official plugins are available:
+We have decided to create a budget application which can keep track of the cost of an user's expenses. 
+The application will give the user the possibility of entering how much money the make per month and see how much is left after all their bills have been paid. 
+The user will be able to add, update and remove expenses, in order to make everything fit their budget and have the expenses shown on screen. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The project is based on the React template using Vite. 
+
+The expenses data will be persisted on a json-server and retrieved through regular REST API requests. 
+We will have full CRUD operations to manage our expenses,
+a http file to test the response we get from our requests, 
+be using react Hooks, 
+use the Fetch API to communicate with the json-server. 
