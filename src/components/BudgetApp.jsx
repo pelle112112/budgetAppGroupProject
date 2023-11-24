@@ -26,7 +26,7 @@ function BudgetApp() {
 
     useEffect(() => {
         getExpenses((data) => setExpenses(data));
-    }, [expenses]);
+    }, []);
 
     useEffect(() => {
         const calculatedExpenses = calculateExpenses();
