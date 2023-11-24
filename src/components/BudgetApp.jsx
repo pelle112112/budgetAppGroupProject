@@ -26,7 +26,7 @@ function BudgetApp() {
 
     useEffect(() => {
         getExpenses((data) => setExpenses(data));
-    }, []);
+    }, [expenses]);
 
     useEffect(() => {
         const calculatedExpenses = calculateExpenses();
@@ -38,7 +38,7 @@ function BudgetApp() {
         <div className ="card">
             <Expenses expenses={expenses} totalPrice={totalExpenses}/>
             <Income totalExpenses={totalExpenses} />
-            <ExpenseForm />
+            <ExpenseForm expenses={expenses} setExpenses={setExpenses}/>
         </div>
     );
 }
