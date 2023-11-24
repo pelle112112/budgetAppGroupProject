@@ -16,6 +16,20 @@ function BudgetApp() {
     function getExpenses(callback) {
         fetchData(APIURL, callback);
     }
+    function deleteExpenseById(expenseId) {
+      fetchData(`${APIURL}/${expenseId}`, () => {}, "DELETE");
+      setExpenses(expenses.filter((expense) => expense.id !== expenseId));
+    }
+
+    function updateExpenseById(expenseId, updatedExpense) {
+      fetchData(`${APIURL}/${expenseId}`, () => {}, "PUT", updatedExpense);
+      setExpenses(expenses.map((expense) => {
+        if (expense.id === expenseId) {
+          return updatedExpense;
+        }
+        return expense;
+      }));
+    }
 
     function calculateExpenses() {
         const totalPrice = expenses.reduce((totalAmount, expense) => {
@@ -36,9 +50,10 @@ function BudgetApp() {
 
     return (
         <div className ="card">
-            <Expenses expenses={expenses} totalPrice={totalExpenses}/>
-            <Income totalExpenses={totalExpenses} />
+            <Expenses expenses={expenses} totalPrice={totalExpenses} deleteExpenseById={deleteExpenseById} updateExpenseById={updateExpenseById}/>
             <ExpenseForm expenses={expenses} setExpenses={setExpenses}/>
+            <Income totalExpenses={totalExpenses} />
+            
         </div>
     );
 }

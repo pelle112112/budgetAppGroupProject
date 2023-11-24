@@ -15,12 +15,15 @@ function Income({ totalExpenses }) {
     return (
         <div>
             <div>
+                <h3> Enter your income</h3>
                 <input placeholder="Enter your income" type="number" value={input} onChange={handleInputChange} />
-                <button onClick={() => handleSetIncome()}>Calculate</button>
+                <button className="single-button" onClick={() => handleSetIncome()}>Calculate</button><br/><br/>
             </div>
             <div>
-                <h2>If your income is: {income}</h2>
-                <h2>This is your available amount after your bills have been paid: {parseInt(income) - parseInt(totalExpenses)} </h2>
+                <label>If your income is:</label><br/>
+                <input type="text" style={{textAlign: "center"}} value={income} readOnly /><br/>
+                <label> This is your available amount after your bills have been paid</label><br/>
+                <input type="text" style={{textAlign: "center"}} value={parseInt(income) - parseInt(totalExpenses)} readOnly /><br/><br/>
             </div>
         </div>
     );
