@@ -27,7 +27,7 @@ function ExpenseForm({ expenses, setExpenses }) {
             <button type="submit" onClick={() => {
                 setExpenses(
                     [...expenses, {
-                        id: expenses.length+1,
+                        id: expenses[expenses.length-1].length+1,
                         name: name,
                         price: price
                     }]
