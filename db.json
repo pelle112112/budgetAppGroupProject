@@ -6,29 +6,19 @@
       "price": "100000"
     },
     {
-      "id": 3,
-      "name": "Water",
-      "price": "3000"
-    },
-    {
-      "id": 4,
-      "name": "Internet",
-      "price": "250"
-    },
-    {
-      "id": 5,
-      "name": "Phone",
-      "price": "500"
-    },
-    {
-      "name": "Mad",
-      "price": "500",
-      "id": 6
-    },
-    {
       "name": "Drikke",
       "price": "500",
       "id": 7
+    },
+    {
+      "name": "Test",
+      "price": "500",
+      "id": 8
+    },
+    {
+      "name": "Test",
+      "price": "500",
+      "id": 9
     }
   ]
 }
