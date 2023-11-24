@@ -20,11 +20,11 @@ function ExpenseForm({ expenses, setExpenses }) {
     return (<div>
         <h2>Add Expense</h2>
         <form onSubmit={handleFormSubmmit}>
-            <label htmlFor="name">Name</label>
-            <input id="name" type="text" placeholder="name" value={name} onChange={(expense) => setName(expense.target.value)} />
-            <label htmlFor="price">Cost</label>
+            <label htmlFor="name"></label>
+            <input id="name" type="text" style={{marginRight: "5px"}} placeholder="name" value={name} onChange={(expense) => setName(expense.target.value)} />
+            <label htmlFor="price"></label>
             <input id="price" type="number" placeholder="price" min={0} onChange={(expense) => setPrice(expense.target.value)} />
-            <button type="submit" onClick={() => {
+            <button className="single-button" type="submit" onClick={() => {
                 setExpenses(
                     [...expenses, {
                         id: expenses.length+1,

@@ -38,7 +38,7 @@ function Expenses({expenses, totalPrice, deleteExpenseById, updateExpenseById}) 
                     setId(expense.id)
                     }
                     }}>{id===expense.id?<>Submit</> : <>Edit</>}</button>
-            <button onClick={()=>deleteExpenseById(expense.id)}>Delete</button>
+            <button className="button-color-red" onClick={()=>deleteExpenseById(expense.id)}>Delete</button>
             
             </div>
         </td>

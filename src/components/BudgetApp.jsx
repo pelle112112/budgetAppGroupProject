@@ -51,8 +51,9 @@ function BudgetApp() {
     return (
         <div className ="card">
             <Expenses expenses={expenses} totalPrice={totalExpenses} deleteExpenseById={deleteExpenseById} updateExpenseById={updateExpenseById}/>
-            <Income totalExpenses={totalExpenses} />
             <ExpenseForm expenses={expenses} setExpenses={setExpenses}/>
+            <Income totalExpenses={totalExpenses} />
+            
         </div>
     );
 }
