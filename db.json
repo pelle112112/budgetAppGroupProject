@@ -1,14 +1,9 @@
 {
   "api": [
     {
-      "id": 1,
-      "name": "Power",
-      "price": "1000"
-    },
-    {
       "id": 2,
-      "name": "Gas",
-      "price": "2000"
+      "name": "FUCKVIERGODE",
+      "price": "100000"
     },
     {
       "id": 3,
@@ -24,6 +19,16 @@
       "id": 5,
       "name": "Phone",
       "price": "500"
+    },
+    {
+      "name": "Mad",
+      "price": "500",
+      "id": 6
+    },
+    {
+      "name": "Drikke",
+      "price": "500",
+      "id": 7
     }
   ]
 }
