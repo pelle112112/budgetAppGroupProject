@@ -1,36 +1,29 @@
 {
-    "api":
-    [
-      {
-        "id": 1,
-        "name": "Power",
-        "price": "1000"
-
-    
-      },
-      {
-        "id": 2,
-        "name": "Gas",
-        "price": "2000"
-    
-      },
-      {
-        "id": 3,
-        "name": "Water",
-        "price": "3000"
-    
-      },
-      {
-        "id": 4,
-        "name": "Internet",
-        "price": "250"
-     
-      },
-      {
-        "id": 5,
-        "name": "Phone",
-        "price": "500"
-   
-      }
-    ]
-  }
+  "api": [
+    {
+      "id": 1,
+      "name": "Power",
+      "price": "1000"
+    },
+    {
+      "id": 2,
+      "name": "Gas",
+      "price": "2000"
+    },
+    {
+      "id": 3,
+      "name": "Water",
+      "price": "3000"
+    },
+    {
+      "id": 4,
+      "name": "Internet",
+      "price": "250"
+    },
+    {
+      "id": 5,
+      "name": "Phone",
+      "price": "500"
+    }
+  ]
+}
