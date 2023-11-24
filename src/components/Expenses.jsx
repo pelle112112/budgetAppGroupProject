@@ -1,4 +1,11 @@
-function Expenses({expenses, totalPrice, deleteExpenseById}) {
+import React, {useRef, useState} from 'react';
+
+function Expenses({expenses, totalPrice, deleteExpenseById, updateExpenseById}) {
+
+    const [id, setId] = useState('');
+    const nameRef = useRef(null);
+    const priceRef = useRef(0);
+
 
     return ( 
     <>
@@ -15,16 +22,29 @@ function Expenses({expenses, totalPrice, deleteExpenseById}) {
         {expenses?.map((expense) => (
         <tr key={crypto.randomUUID()}>
         <td>{expense.id}</td>
-        <td>{expense.name}</td>
-        <td>{expense.price}</td>
+        <td>{id===expense.id? <input type='text' placeholder={expense.name} ref={nameRef}></input> : expense.name}</td>
+        <td>{id===expense.id? <input type='number' placeholder={expense.price} ref={priceRef}></input> : expense.price}</td>
         <td className= "action-cell">
             <div className="button-container">
-            <button>Edit</button>
+            <button onClick={()=>
+                {
+                    if(id===expense.id){
+                        expense.name=nameRef.current.value
+                        expense.price=priceRef.current.value
+                        updateExpenseById(expense.id, expense)
+                        setId('')
+                    }
+                    else{
+                    setId(expense.id)
+                    }
+                    }}>{id===expense.id?<>Submit</> : <>Edit</>}</button>
             <button onClick={()=>deleteExpenseById(expense.id)}>Delete</button>
+            
             </div>
         </td>
         </tr>
         ))}
+        
         <tr>
             <td>Total expenses:</td>
             <td/>

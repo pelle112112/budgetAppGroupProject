@@ -16,8 +16,19 @@ function BudgetApp() {
     function getExpenses(callback) {
         fetchData(APIURL, callback);
     }
-    function deleteExpenseById(personId) {
-      fetchData(`${APIURL}/${personId}`, () => {}, "DELETE");
+    function deleteExpenseById(expenseId) {
+      fetchData(`${APIURL}/${expenseId}`, () => {}, "DELETE");
+      setExpenses(expenses.filter((expense) => expense.id !== expenseId));
+    }
+
+    function updateExpenseById(expenseId, updatedExpense) {
+      fetchData(`${APIURL}/${expenseId}`, () => {}, "PUT", updatedExpense);
+      setExpenses(expenses.map((expense) => {
+        if (expense.id === expenseId) {
+          return updatedExpense;
+        }
+        return expense;
+      }));
     }
 
     function calculateExpenses() {
@@ -29,7 +40,7 @@ function BudgetApp() {
 
     useEffect(() => {
         getExpenses((data) => setExpenses(data));
-    }, [expenses]);
+    }, []);
 
     useEffect(() => {
         const calculatedExpenses = calculateExpenses();
@@ -39,7 +50,7 @@ function BudgetApp() {
 
     return (
         <div className ="card">
-            <Expenses expenses={expenses} totalPrice={totalExpenses} deleteExpenseById={deleteExpenseById}/>
+            <Expenses expenses={expenses} totalPrice={totalExpenses} deleteExpenseById={deleteExpenseById} updateExpenseById={updateExpenseById}/>
             <Income totalExpenses={totalExpenses} />
             <ExpenseForm expenses={expenses} setExpenses={setExpenses}/>
         </div>
