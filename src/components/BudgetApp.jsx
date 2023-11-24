@@ -37,8 +37,8 @@ function BudgetApp() {
     return (
         <div className ="card">
             <Expenses expenses={expenses} totalPrice={totalExpenses}/>
-            <Income totalExpenses={totalExpenses} />
             <ExpenseForm />
+            <Income totalExpenses={totalExpenses} />
         </div>
     );
 }

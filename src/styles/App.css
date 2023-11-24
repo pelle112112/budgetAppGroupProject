@@ -57,3 +57,16 @@
   border: 1px solid black;
   margin-left: 5px;
 }
+
+.single-button {
+  border: 1px solid black;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-left: 5px;
+  margin-top: 3px;
+}
+
+.button-color-red {
+  background-color: rgb(211, 14, 14);
+  color: white;
+}

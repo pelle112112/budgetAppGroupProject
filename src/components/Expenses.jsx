@@ -20,7 +20,7 @@ function Expenses({expenses, totalPrice}) {
         <td className= "action-cell">
             <div className="button-container">
             <button>Edit</button>
-            <button>Delete</button>
+            <button className="button-color-red">Delete</button>
             </div>
         </td>
         </tr>
