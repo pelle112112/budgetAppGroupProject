@@ -16,6 +16,9 @@ function BudgetApp() {
     function getExpenses(callback) {
         fetchData(APIURL, callback);
     }
+    function deleteExpenseById(personId) {
+      fetchData(`${APIURL}/${personId}`, () => {}, "DELETE");
+    }
 
     function calculateExpenses() {
         const totalPrice = expenses.reduce((totalAmount, expense) => {
@@ -36,7 +39,7 @@ function BudgetApp() {
 
     return (
         <div className ="card">
-            <Expenses expenses={expenses} totalPrice={totalExpenses}/>
+            <Expenses expenses={expenses} totalPrice={totalExpenses} deleteExpenseById={deleteExpenseById}/>
             <Income totalExpenses={totalExpenses} />
             <ExpenseForm />
         </div>

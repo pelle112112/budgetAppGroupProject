@@ -1,4 +1,4 @@
-function Expenses({expenses, totalPrice}) {
+function Expenses({expenses, totalPrice, deleteExpenseById}) {
 
     return ( 
     <>
@@ -20,7 +20,7 @@ function Expenses({expenses, totalPrice}) {
         <td className= "action-cell">
             <div className="button-container">
             <button>Edit</button>
-            <button>Delete</button>
+            <button onClick={()=>deleteExpenseById(expense.id)}>Delete</button>
             </div>
         </td>
         </tr>
