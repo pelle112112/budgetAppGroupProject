@@ -11,9 +11,24 @@
       "price": "3000"
     },
     {
-      "name": "Power",
-      "price": "400",
-      "id": 4
+      "id": 4,
+      "name": "Internet",
+      "price": "250"
+    },
+    {
+      "id": 5,
+      "name": "Phone",
+      "price": "500"
+    },
+    {
+      "name": "Mad",
+      "price": "500",
+      "id": 6
+    },
+    {
+      "name": "Drikke",
+      "price": "500",
+      "id": 7
     }
   ]
 }
