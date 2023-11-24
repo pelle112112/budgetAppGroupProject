@@ -25,9 +25,10 @@ function ExpenseForm({ expenses, setExpenses }) {
             <label htmlFor="price"></label>
             <input id="price" type="number" placeholder="price" min={0} onChange={(expense) => setPrice(expense.target.value)} />
             <button className="single-button" type="submit" onClick={() => {
+                const id = expenses[expenses.length-1].id;
                 setExpenses(
                     [...expenses, {
-                        id: expenses[expenses.length-1].length+1,
+                        id: (parseInt(id)+1),
                         name: name,
                         price: price
                     }]
