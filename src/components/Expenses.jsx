@@ -22,8 +22,8 @@ function Expenses({expenses, totalPrice, deleteExpenseById, updateExpenseById}) 
         {expenses?.map((expense) => (
         <tr key={crypto.randomUUID()}>
         <td>{expense.id}</td>
-        <td>{id===expense.id? <input type='text' placeholder={expense.name} ref={nameRef}></input> : expense.name}</td>
-        <td>{id===expense.id? <input type='number' placeholder={expense.price} ref={priceRef}></input> : expense.price}</td>
+        <td>{id===expense.id? <input style={{textAlign:"center"}} type='text' placeholder={expense.name} ref={nameRef} value={expense.name}></input> : expense.name}</td>
+        <td>{id===expense.id? <input style={{textAlign:"center"}} type='number' placeholder={expense.price} ref={priceRef} value={expense.price}></input> : expense.price}</td>
         <td className= "action-cell">
             <div className="button-container">
             <button onClick={()=>

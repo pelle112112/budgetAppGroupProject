@@ -70,3 +70,8 @@
   background-color: rgb(211, 14, 14);
   color: white;
 }
+.table-striped {
+  table-layout: fixed;
+  width: 100%;
+  
+}
